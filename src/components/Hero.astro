@@ -1,0 +1,188 @@
+---
+---
+
+<section class="hero">
+  <div class="hero-bg">
+    <img src="/images/roaster-action.jpg" alt="Midwest Grain Roasters portable roaster in action on a farm" />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-tag">Portable Grain Roasting Since 1989</p>
+    <h1>We Come to You.<br/>Your Grain. Your Farm.<br/>Maximum Value.</h1>
+    <p class="hero-sub">
+      On-site soybean and grain roasting for dairy farmers and feed mills across the Midwest.
+      Keep your dry matter, boost bypass protein, and cut costs.
+    </p>
+    <div class="hero-actions">
+      <a href="tel:8003663402" class="btn btn-primary">Call 800-366-3402</a>
+      <a href="#services" class="btn btn-secondary">See Our Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number">35+</span>
+        <span class="stat-label">Years of Service</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-number">64%</span>
+        <span class="stat-label">Avg Bypass Protein</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-number">350+</span>
+        <span class="stat-label">Bu/Hr Capacity</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(26, 26, 26, 0.88) 0%,
+      rgba(61, 43, 31, 0.75) 50%,
+      rgba(26, 26, 26, 0.65) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8rem 2rem 4rem;
+  }
+
+  .hero-tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-wheat-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    color: white;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+  }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 550px;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.9rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: var(--color-wheat-dark);
+    color: var(--color-earth);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-wheat);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+  }
+
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-number {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-wheat-dark);
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  @media (max-width: 640px) {
+    .hero-stats {
+      gap: 1.5rem;
+    }
+
+    .stat-number {
+      font-size: 1.5rem;
+    }
+
+    .hero-content {
+      padding-top: 7rem;
+    }
+  }
+</style>

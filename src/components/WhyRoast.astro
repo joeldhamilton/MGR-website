@@ -1,0 +1,146 @@
+---
+---
+
+<section class="why-roast" id="why-roast">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-image">
+        <img src="/images/dairy-cows.jpg" alt="Dairy cows feeding at a barn" />
+      </div>
+      <div class="why-content">
+        <p class="section-tag">The Bottom Line</p>
+        <h2>Why Roast On-Site?</h2>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="why-number">01</div>
+            <div>
+              <h3>Keep All Your Dry Matter</h3>
+              <p>When you roast at the co-op, you lose 10% or more dry matter. Our on-site service means the only shrink is water. All your dry matter stays in your feed bin.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-number">02</div>
+            <div>
+              <h3>Skip the Elevator Penalties</h3>
+              <p>Elevators charge 4% shrink per point on beans over 15% moisture, plus drying fees and minimums. At 20% moisture, that's a 20% dock before you even start. Roasting on-site costs a fraction.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-number">03</div>
+            <div>
+              <h3>Add Value, Not Cost</h3>
+              <p>Dry beans cost $1.00–$1.15 per bushel to roast. Even wet beans at $1.50/bu is far less than elevator shrinks and docks — and you get a value-added roasted soybean.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-number">04</div>
+            <div>
+              <h3>Long-Term Storage</h3>
+              <p>Roasted soybeans store for years. We've seen 5–6 year old roasted beans fed with no herd performance loss. Most customers roast annually.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-roast {
+    padding: 7rem 2rem;
+    background: var(--color-cream);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .why-image {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  }
+
+  .why-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 500px;
+  }
+
+  .section-tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-rust);
+    margin-bottom: 0.75rem;
+  }
+
+  .why-content h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: var(--color-earth);
+    margin-bottom: 2.5rem;
+  }
+
+  .why-points {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .why-point {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .why-number {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--color-wheat-dark);
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border: 2px solid var(--color-wheat-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    margin-top: 2px;
+  }
+
+  .why-point h3 {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-earth);
+    margin-bottom: 0.35rem;
+  }
+
+  .why-point p {
+    font-size: 0.92rem;
+    color: var(--color-gray);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .why-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .why-image img {
+      min-height: 300px;
+    }
+  }
+</style>

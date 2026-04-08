@@ -1,0 +1,125 @@
+---
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">MGR</span>
+        <p>Midwest Grain Roasters, Inc.</p>
+        <p class="footer-tagline">Portable grain roasting since 1989</p>
+      </div>
+      <div class="footer-links">
+        <a href="#top">Home</a>
+        <a href="#services">Services</a>
+        <a href="#why-roast">Why Roast</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <a href="tel:8003663402">800-366-3402</a>
+        <a href="mailto:ericlhamilton@gmail.com">ericlhamilton@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} Midwest Grain Roasters, Inc. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-dark);
+    padding: 3rem 2rem 1.5rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-wheat-dark);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .footer-tagline {
+    font-size: 0.75rem !important;
+    color: rgba(255,255,255,0.35) !important;
+    margin-top: 0.15rem;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-wheat-dark);
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.35rem;
+  }
+
+  .footer-contact a {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    transition: color 0.2s ease;
+  }
+
+  .footer-contact a:hover {
+    color: var(--color-wheat-dark);
+  }
+
+  .footer-bottom {
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+  }
+
+  @media (max-width: 768px) {
+    .footer-inner {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-contact {
+      align-items: center;
+    }
+  }
+</style>

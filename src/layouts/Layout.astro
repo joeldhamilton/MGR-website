@@ -1,0 +1,81 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Portable grain roasting since 1989. On-site soybean and grain roasting for dairy farmers and feed mills across the Midwest." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --color-wheat: #f5e6c8;
+    --color-wheat-light: #faf3e6;
+    --color-wheat-dark: #d4a853;
+    --color-earth: #3d2b1f;
+    --color-earth-light: #5c4033;
+    --color-rust: #8b4513;
+    --color-rust-light: #a0522d;
+    --color-green: #2d5016;
+    --color-green-light: #4a7c2e;
+    --color-cream: #fefbf4;
+    --color-dark: #1a1a1a;
+    --color-gray: #6b7280;
+    --color-gray-light: #f3f4f6;
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    line-height: 1.6;
+    background: var(--color-cream);
+    overflow-x: hidden;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+  }
+</style>

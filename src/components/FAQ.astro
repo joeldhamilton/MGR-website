@@ -1,0 +1,147 @@
+---
+const faqs = [
+  {
+    question: "How many bushels per hour do you roast?",
+    answer: `Moisture makes a big difference. Dry beans go faster than wet beans. Estimated rates for soybeans:<br/><br/>
+    <strong>10%</strong> = 350+ bu/hr<br/>
+    <strong>12%</strong> = 320 bu/hr<br/>
+    <strong>14%</strong> = 300 bu/hr<br/>
+    <strong>16%</strong> = 260 bu/hr<br/>
+    <strong>18%</strong> = 220 bu/hr<br/>
+    Over 18% the rate holds steady but temperature begins to fall.`
+  },
+  {
+    question: "What do I need to supply?",
+    answer: "We come ready to work! LP gas and electricity are on the service truck. We have an inbound roaster feed auger and a boom auger discharge. Most trucks and wagons can be unloaded and filled. You supply the grain and someone to move trucks and wagons and shovel out grain bins."
+  },
+  {
+    question: "How wet can soybeans be roasted?",
+    answer: "We achieve high bypass protein levels with beans up to 18% moisture — no problem. We can roast up to 25% moisture beans. Extremely wet beans will be roasted, dried, and storable with reduced trypsin inhibitor and increased bypass values. They may not hit optimum 60%+ bypass, but roasting is a great alternative to giving them away at the elevator after all the shrinks and docks."
+  },
+  {
+    question: "What is the shrink on roasted soybeans?",
+    answer: "The only shrink is water removed by the process. Ending moisture is usually about 3–4%. A 13% soybean will have about 9% moisture shrink and nearly zero dry matter shrink. Our on-site service keeps your dry matter tonnage in your inventory — most farmers see 10% or more dry matter loss when roasting at the co-op."
+  },
+  {
+    question: "Can I fill a grain bin with roasted soybeans?",
+    answer: "Yes. If you have a fan on the bin, we can fill it with fresh roasted soybeans. We routinely fill 10,000–20,000 bushel bins."
+  },
+  {
+    question: "How long can I store roasted soybeans?",
+    answer: "A long time! Most customers roast annually. Through the years we've seen 5 and 6 year old roasted soybeans fed with no herd performance loss."
+  },
+  {
+    question: "Do you only roast during harvest?",
+    answer: "No. We roast for our customers all year round."
+  },
+  {
+    question: "I don't have a bin. Can I still roast?",
+    answer: "Yes! Many customers roast from wagon to wagon after harvest and store roasted soybeans on the wagon until fed. Others lay a few thousand bushels in a commodity shed."
+  },
+];
+---
+
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">Common Questions</p>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-grid">
+      {faqs.map((faq, i) => (
+        <details class="faq-item">
+          <summary>
+            <span class="faq-question">{faq.question}</span>
+            <span class="faq-chevron">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="20" height="20"><path d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer" set:html={faq.answer} />
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    padding: 7rem 2rem;
+    background: white;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-rust);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-header h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: var(--color-earth);
+  }
+
+  .faq-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .faq-item:first-child {
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    cursor: pointer;
+    list-style: none;
+    gap: 1rem;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-earth);
+  }
+
+  .faq-chevron {
+    flex-shrink: 0;
+    color: var(--color-gray);
+    transition: transform 0.2s ease;
+  }
+
+  .faq-item[open] .faq-chevron {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    padding: 0 0 1.5rem;
+    font-size: 0.95rem;
+    color: var(--color-gray);
+    line-height: 1.7;
+    max-width: 90%;
+  }
+</style>
