@@ -1,11 +1,12 @@
 ---
+const base = import.meta.env.BASE_URL;
 ---
 
 <section class="why-roast" id="why-roast">
   <div class="container">
     <div class="why-grid">
       <div class="why-image">
-        <img src="/images/dairy-cows.jpg" alt="Dairy cows feeding at a barn" />
+        <img src={`${base}images/dairy-cows.jpg`} alt="Dairy cows feeding at a barn" />
       </div>
       <div class="why-content">
         <p class="section-tag">The Bottom Line</p>
